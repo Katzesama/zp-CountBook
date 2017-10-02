@@ -31,7 +31,7 @@ public class AddCounterActivity extends CountBookActivity {
         /*
         set up a button to save, and before saving
         check the values entered, refuse the entry of
-        invalid value
+
          */
         final Button saveButton = (Button) findViewById(R.id.saveButton);
 
