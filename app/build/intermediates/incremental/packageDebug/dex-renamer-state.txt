@@ -1,0 +1,7 @@
+#Mon Oct 02 00:09:17 MDT 2017
+base.0=/Users/Irissama/AndroidStudioProjects/zp-CountBook/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_326187a5089b2c20137cb1471c5cab0f8a5adf34
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/Users/Irissama/AndroidStudioProjects/zp-CountBook/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_14c053f60589c4b43de49d929f7fe4a379f24570/classes.dex
+base.1=/Users/Irissama/AndroidStudioProjects/zp-CountBook/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_14c053f60589c4b43de49d929f7fe4a379f24570
+file.0=/Users/Irissama/AndroidStudioProjects/zp-CountBook/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_326187a5089b2c20137cb1471c5cab0f8a5adf34/classes.dex

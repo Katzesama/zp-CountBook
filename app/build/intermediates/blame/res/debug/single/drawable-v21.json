@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/Irissama/AndroidStudioProjects/zp-CountBook/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/Irissama/.android/build-cache/f0980bae29a6ae75fbfd0641c69de28d1e5897c1/output/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/Irissama/AndroidStudioProjects/zp-CountBook/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/Irissama/.android/build-cache/f0980bae29a6ae75fbfd0641c69de28d1e5897c1/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/Irissama/AndroidStudioProjects/zp-CountBook/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/Irissama/.android/build-cache/f0980bae29a6ae75fbfd0641c69de28d1e5897c1/output/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/Irissama/AndroidStudioProjects/zp-CountBook/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/Irissama/.android/build-cache/f0980bae29a6ae75fbfd0641c69de28d1e5897c1/output/res/drawable-v21/abc_btn_colored_material.xml"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/Irissama/AndroidStudioProjects/zp-CountBook/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/Irissama/.android/build-cache/f0980bae29a6ae75fbfd0641c69de28d1e5897c1/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/Irissama/AndroidStudioProjects/zp-CountBook/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/Irissama/.android/build-cache/f0980bae29a6ae75fbfd0641c69de28d1e5897c1/output/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/Irissama/AndroidStudioProjects/zp-CountBook/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/Irissama/.android/build-cache/f0980bae29a6ae75fbfd0641c69de28d1e5897c1/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/Irissama/AndroidStudioProjects/zp-CountBook/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/Irissama/.android/build-cache/f0980bae29a6ae75fbfd0641c69de28d1e5897c1/output/res/layout-v21/notification_action_tombstone.xml"
+    }
+]
