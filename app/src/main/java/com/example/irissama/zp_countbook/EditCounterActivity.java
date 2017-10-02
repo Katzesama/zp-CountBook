@@ -12,6 +12,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+/**
+ * New activity that allows user to edit the selected counter
+ */
 public class EditCounterActivity extends CountBookActivity {
     Integer count;
     TextView currente;
@@ -21,12 +24,21 @@ public class EditCounterActivity extends CountBookActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_counter);
 
+        /*
+        get the counter's position
+         */
         Intent fmain = getIntent();
         final int itempo = fmain.getIntExtra("itemposition", 0);
 
         loadFromFile();
+        /*
+        get the counter's current value for further use
+        */
         count = counters.get(itempo).getCurrent_v();
 
+        /*
+        set up the editable attributes of counter
+         */
         final EditText namee = (EditText) findViewById(R.id.name);
         namee.setText(counters.get(itempo).getName());
         currente = (TextView) findViewById(R.id.current);
@@ -36,6 +48,12 @@ public class EditCounterActivity extends CountBookActivity {
         final EditText commente = (EditText) findViewById(R.id.comment);
         commente.setText(counters.get(itempo).getComment());
 
+        /*
+        create a save button to save the counter
+        create a increase button to increment current value by 1
+        create a decrease button to decrease current value by 1
+        create a reset button to reset current value to intial value
+         */
        final Button saveButton = (Button) findViewById(R.id.saveButton);
         Button incrButton = (Button) findViewById(R.id.increase);
         Button decrButton = (Button) findViewById(R.id.decrease);
@@ -52,6 +70,7 @@ public class EditCounterActivity extends CountBookActivity {
         decrButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                /*to check if the current value will drop to negative*/
                 if (count == 0){
                     Toast.makeText(EditCounterActivity.this,
                             "Current value cannot be negative.", Toast.LENGTH_SHORT).show();
@@ -70,6 +89,11 @@ public class EditCounterActivity extends CountBookActivity {
             }
         });
 
+        /*
+          update the counter to file
+          and check the counter's edited attributes
+          refuse the invalid values
+         */
         saveButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

@@ -12,6 +12,9 @@ import java.util.Locale;
  * Created by Irissama on 28/9/2017.
  */
 
+/**
+ * represents a counter object
+ */
 public class Counter {
     private String name;
     private Date date;
@@ -20,6 +23,9 @@ public class Counter {
     private String comment;
     private String displaydate;
 
+    /*
+     * set up a counter with its attributes set
+     */
     public Counter (String name, Integer initial, String comment, Integer current) {
         this.name = name;
         initial_v = initial;
@@ -29,6 +35,9 @@ public class Counter {
         this.current_v = current;
     }
 
+    /*
+    functions that returns counter's attributes
+     */
    public String getName(){
         return name;
     }
@@ -49,6 +58,9 @@ public class Counter {
         return displaydate;
     }
 
+    /*
+    the function returns the string to adapter to show
+     */
     @Override
     public String toString(){
         return name + " has " + current_v.toString() + '\n'

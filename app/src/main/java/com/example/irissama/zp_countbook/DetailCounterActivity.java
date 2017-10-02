@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+/**
+ * New activity to show the detail of selected counter
+ */
 public class DetailCounterActivity extends CountBookActivity {
     TextView dname, dinitial, dcurrent, ddate, dcomment;
 
@@ -17,8 +20,15 @@ public class DetailCounterActivity extends CountBookActivity {
         final int itempo = fmain.getIntExtra("ip", 0);
 
         loadFromFile();
+        /*
+        get the selected counter
+         */
         Counter display = counters.get(itempo);
 
+        /*
+        set up the fields and get attributes from the counter
+        set Text into the field to display
+         */
         dname = (TextView) findViewById(R.id.name);
         dinitial = (TextView) findViewById(R.id.initial);
         dcurrent = (TextView) findViewById(R.id.current);

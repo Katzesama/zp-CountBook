@@ -29,8 +29,7 @@ import java.util.ArrayList;
 
 
 /**
- * The main activity, main page, shows a list of counters
- *
+ * The main activity, main page
  */
 public class CountBookActivity extends AppCompatActivity {
 
@@ -45,8 +44,16 @@ public class CountBookActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_count_bookactivity);
 
+        /*
+        set up the View for main page
+         */
         title = (TextView) findViewById(R.id.oldCounterTitle);
         oldCountersList = (ListView) findViewById(R.id.oldCounterlist);
+
+        /*
+        create a button to jump to AddCounterActivity,
+        where user can add a counter
+         */
         Button add = (Button) findViewById(R.id.add);
 
         add.setOnClickListener(new View.OnClickListener() {
@@ -57,9 +64,13 @@ public class CountBookActivity extends AppCompatActivity {
             }
         });
 
+        /* create a context menu for each counter in the list*/
        registerForContextMenu(oldCountersList);
     }
 
+    /*
+    add the options to the context menu
+     */
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v,
                                     ContextMenu.ContextMenuInfo menuInfo){
@@ -69,6 +80,9 @@ public class CountBookActivity extends AppCompatActivity {
         menu.add(0, v.getId(), 0, "Detail");
     }
 
+    /*
+    define actions for the options in context menu
+     */
     @Override
     public boolean onContextItemSelected(MenuItem item){
         AdapterView.AdapterContextMenuInfo info =
@@ -76,11 +90,13 @@ public class CountBookActivity extends AppCompatActivity {
         int ItemClicked = info.position;
 
         if (item.getTitle() == "Edit") {
+            //jump to EditCounterActivity, where user can edit the existing counter
             Toast.makeText(this, "Editing", Toast.LENGTH_SHORT).show();
             Intent editc = new Intent(CountBookActivity.this, EditCounterActivity.class);
             editc.putExtra("itemposition", ItemClicked);
             startActivity(editc);
         } else if (item.getTitle() == "Delete"){
+            //Delete the select counter from list
             Toast.makeText(this, "Deleted", Toast.LENGTH_SHORT).show();
             counters.remove(ItemClicked);
             adapter.notifyDataSetChanged();
@@ -88,6 +104,7 @@ public class CountBookActivity extends AppCompatActivity {
             title.setText("Number of Counters : " + counters.size());
 
         } else if (item.getTitle() == "Detail") {
+            //jump to DetailCounterActivity, user can see deatils of the selected counter
             Intent display = new Intent(CountBookActivity.this, DetailCounterActivity.class);
             display.putExtra("ip", ItemClicked);
             startActivity(display);
@@ -99,7 +116,10 @@ public class CountBookActivity extends AppCompatActivity {
 
     }
 
-
+    /*
+     * show the existing list of counters and summary of counters number
+     * on every start of the main activity
+     */
    @Override
     protected void onStart(){
        super.onStart();
@@ -110,6 +130,7 @@ public class CountBookActivity extends AppCompatActivity {
 
     }
 
+    //load the existing counters from file
    protected void loadFromFile() {
         try{
             FileInputStream fis = openFileInput(FILENAME);
@@ -128,6 +149,7 @@ public class CountBookActivity extends AppCompatActivity {
         }
     }
 
+    //write counters to a file
     protected void saveInFile(){
         try{
             FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);

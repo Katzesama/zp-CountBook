@@ -10,6 +10,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * a new activity that allows user to customize a counter
+ *  and add to the list of counters
+ */
 public class AddCounterActivity extends CountBookActivity {
 
     @Override
@@ -17,10 +21,18 @@ public class AddCounterActivity extends CountBookActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_counter);
 
+        /*
+         * set up textable field for user to fill
+         */
         final EditText names = (EditText) findViewById(R.id.name);
         final EditText intial = (EditText) findViewById(R.id.initial);
         final EditText comment = (EditText) findViewById(R.id.comment);
 
+        /*
+        set up a button to save, and before saving
+        check the values entered, refuse the entry of
+        invalid value
+         */
         final Button saveButton = (Button) findViewById(R.id.saveButton);
 
         saveButton.setOnClickListener(new View.OnClickListener(){
